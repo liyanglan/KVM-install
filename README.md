@@ -35,14 +35,14 @@ yum update
 # 快速使用示例:
 
 # debian 7:
-bash <(wget --no-check-certificate -qO- 'https://moeclub.org/attachment/LinuxShell/InstallNET.sh') -d 7 -v 64 -a
+bash <(wget --no-check-certificate -qO- 'https://raw.githubusercontent.com/liyanglan/KVM-install/master/InstallNET.sh') -d 7 -v 64 -a
 # debian 8:
-bash <(wget --no-check-certificate -qO- 'https://moeclub.org/attachment/LinuxShell/InstallNET.sh') -d 8 -v 64 -a
+bash <(wget --no-check-certificate -qO- 'https://raw.githubusercontent.com/liyanglan/KVM-install/master/InstallNET.sh') -d 8 -v 64 -a
 # debian 9:
-bash <(wget --no-check-certificate -qO- 'https://moeclub.org/attachment/LinuxShell/InstallNET.sh') -d 9 -v 64 -a
+bash <(wget --no-check-certificate -qO- 'https://raw.githubusercontent.com/liyanglan/KVM-install/master/InstallNET.sh') -d 9 -v 64 -a
 # ubuntu 14.04:
-bash <(wget --no-check-certificate -qO- 'https://moeclub.org/attachment/LinuxShell/InstallNET.sh') -u 14.04 -v 64 -a
+bash <(wget --no-check-certificate -qO- 'https://raw.githubusercontent.com/liyanglan/KVM-install/master/InstallNET.sh') -u 14.04 -v 64 -a
 # ubuntu 16.04:
-bash <(wget --no-check-certificate -qO- 'https://moeclub.org/attachment/LinuxShell/InstallNET.sh') -u 16.04 -v 64 -a
+bash <(wget --no-check-certificate -qO- 'https://raw.githubusercontent.com/liyanglan/KVM-install/master/InstallNET.sh') -u 16.04 -v 64 -a
 # ubuntu 17.04:
-bash <(wget --no-check-certificate -qO- 'https://moeclub.org/attachment/LinuxShell/InstallNET.sh') -u 18.04 -v 64 -a
+bash <(wget --no-check-certificate -qO- 'https://raw.githubusercontent.com/liyanglan/KVM-install/master/InstallNET.sh') -u 18.04 -v 64 -a
