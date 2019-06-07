@@ -9,7 +9,8 @@ Debian/Ubuntu/CentOS 网络安装/网络重装/纯净安装 一键脚本
 只要有root权限,还您一个纯净的系统。
 
 注意:
-全自动安装默认root密码:MoeClub.org
+全自动安装默认root密码:```  MoeClub.org  ```
+
 安装完成后请立即更改密码.
 能够全自动重装Debian/Ubuntu/CentOS等系统.
 同时提供dd安装镜像功能,例如: 全自动无救援dd安装windows系统
