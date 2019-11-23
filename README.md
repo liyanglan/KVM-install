@@ -49,25 +49,29 @@ yum update
 
 ### debian 7:
 ```
-bash <(wget --no-check-certificate -qO- 'https://raw.githubusercontent.com/liyanglan/KVM-install/master/InstallNET.sh') -d 7 -v 64 -a
+bash <(wget --no-check-certificate -qO- 'https://git.io/JeiRm') -d 7 -v 64 -a
 ```
 ### debian 8:
 ```
-bash <(wget --no-check-certificate -qO- 'https://raw.githubusercontent.com/liyanglan/KVM-install/master/InstallNET.sh') -d 8 -v 64 -a
+bash <(wget --no-check-certificate -qO- 'https://git.io/JeiRm') -d 8 -v 64 -a
 ```
 ### debian 9:
 ```
-bash <(wget --no-check-certificate -qO- 'https://raw.githubusercontent.com/liyanglan/KVM-install/master/InstallNET.sh') -d 9 -v 64 -a
+bash <(wget --no-check-certificate -qO- 'https://git.io/JeiRm') -d 9 -v 64 -a
+```
+### debian 10:
+```
+bash <(wget --no-check-certificate -qO- 'https://git.io/JeiRm') -d 10 -v 64 -a
 ```
 ### ubuntu 14.04:
 ```
-bash <(wget --no-check-certificate -qO- 'https://raw.githubusercontent.com/liyanglan/KVM-install/master/InstallNET.sh') -u 14.04 -v 64 -a
+bash <(wget --no-check-certificate -qO- 'https://git.io/JeiRm') -u 14.04 -v 64 -a
 ```
 ### ubuntu 16.04:
 ```
-bash <(wget --no-check-certificate -qO- 'https://raw.githubusercontent.com/liyanglan/KVM-install/master/InstallNET.sh') -u 16.04 -v 64 -a
+bash <(wget --no-check-certificate -qO- 'https://git.io/JeiRm') -u 16.04 -v 64 -a
 ```
 ### ubuntu 18.04:
 ```
-bash <(wget --no-check-certificate -qO- 'https://raw.githubusercontent.com/liyanglan/KVM-install/master/InstallNET.sh') -u 18.04 -v 64 -a
+bash <(wget --no-check-certificate -qO- 'https://git.io/JeiRm') -u 18.04 -v 64 -a
 ```
