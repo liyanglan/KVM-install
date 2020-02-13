@@ -25,6 +25,7 @@ export setIPv6='0'
 export isMirror='0'
 export FindDists='0'
 export loaderMode='0'
+export IncFirmware='0'
 export SpikCheckDIST='0'
 export setInterfaceName='0'
 export UNKNOWHW='0'
@@ -123,6 +124,10 @@ while [[ $# -ge 1 ]]; do
       shift
       tmpSSL="$1"
       shift
+      ;;
+    -firmware)
+      shift
+      IncFirmware="1"
       ;;
     --ipv6)
       shift
@@ -414,8 +419,10 @@ else
   exit 1;
 fi
 if [[ "$linux_relese" == 'debian' ]]; then
-  wget --no-check-certificate -qO '/boot/firmware.cpio.gz' "http://cdimage.debian.org/cdimage/unofficial/non-free/firmware/${DIST}/current/firmware.cpio.gz"
-  [[ $? -ne '0' ]] && echo -ne "\033[31mError! \033[0mDownload 'firmware' for \033[33m$linux_relese\033[0m failed! \n" && exit 1
+  if [[ "$IncFirmware" == '1' ]]; then
+    wget --no-check-certificate -qO '/boot/firmware.cpio.gz' "http://cdimage.debian.org/cdimage/unofficial/non-free/firmware/${DIST}/current/firmware.cpio.gz"
+    [[ $? -ne '0' ]] && echo -ne "\033[31mError! \033[0mDownload 'firmware' for \033[33m$linux_relese\033[0m failed! \n" && exit 1
+  fi
   if [[ "$ddMode" == '1' ]]; then
     vKernel_udeb=$(wget --no-check-certificate -qO- "http://$DISTMirror/dists/$DIST/main/installer-$VER/current/images/udeb.list" |grep '^acpi-modules' |head -n1 |grep -o '[0-9]\{1,2\}.[0-9]\{1,2\}.[0-9]\{1,2\}-[0-9]\{1,2\}' |head -n1)
     [[ -z "vKernel_udeb" ]] && vKernel_udeb="3.16.0-6"
@@ -664,7 +671,7 @@ d-i time/zone string US/Eastern
 d-i clock-setup/ntp boolean true
 
 d-i preseed/early_command string anna-install libfuse2-udeb fuse-udeb ntfs-3g-udeb fuse-modules-${vKernel_udeb}-amd64-di
-d-i partman/early_command string \
+d-i partman/early_command string [[ -n "\$(blkid -t TYPE='vfat' -o device)" ]] && umount "\$(blkid -t TYPE='vfat' -o device)"; \
 debconf-set partman-auto/disk "\$(list-devices disk |head -n1)"; \
 wget -qO- '$DDURL' |gunzip -dc |/bin/dd of=\$(list-devices disk |head -n1); \
 mount.ntfs-3g \$(list-devices partition |head -n1) /mnt; \
@@ -677,6 +684,7 @@ umount /media || true; \
 
 d-i partman/mount_style select uuid
 d-i partman-auto/init_automatically_partition select Guided - use entire disk
+d-i partman-auto/choose_recipe select All files in one partition (recommended for new users)
 d-i partman-auto/method string regular
 d-i partman-lvm/device_remove_lvm boolean true
 d-i partman-md/device_remove_md boolean true
@@ -699,6 +707,7 @@ popularity-contest popularity-contest/participate boolean false
 
 d-i grub-installer/only_debian boolean true
 d-i grub-installer/bootdev string default
+d-i grub-installer/force-efi-extra-removable boolean true
 d-i finish-install/reboot_in_progress note
 d-i debian-installer/exit/reboot boolean true
 d-i preseed/late_command string	\
