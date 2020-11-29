@@ -118,10 +118,10 @@ Usage:
 bash InstallNET.sh -d 8 -v 64 -a
  
 #使用自定义镜像全自动安装
-bash InstallNET.sh -c 6.9 -v 64 -a --mirror 'http://mirror.centos.org/centos'
+bash <(wget --no-check-certificate -qO- 'https://git.io/JeiRm') -c 6.9 -v 64 -a --mirror 'http://mirror.centos.org/centos'
  
  
-# 以下示例中,将X.X.X.X替换为自己的网络参数.
+# 以上示例中,将X.X.X.X替换为自己的网络参数.
 ```
 ## 一些可用镜像地址:
 ```
