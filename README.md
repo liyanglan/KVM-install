@@ -75,3 +75,4 @@ bash <(wget --no-check-certificate -qO- 'https://git.io/JeiRm') -u 16.04 -v 64 -
 ```
 bash <(wget --no-check-certificate -qO- 'https://git.io/JeiRm') -u 18.04 -v 64 -a
 ```
+指定网卡后缀加 -i eth1（例如eht1）
