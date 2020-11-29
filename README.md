@@ -45,8 +45,33 @@ apt-get update
 ```
 yum update
 ```
+```
+Usage:
+        bash InstallNET.sh      -d/--debian [dist-name]
+                                -u/--ubuntu [dist-name]
+                                -c/--centos [dist-version]
+                                -v/--ver [32/i386|64/amd64]
+                                --ip-addr/--ip-gate/--ip-mask
+                                -apt/-yum/--mirror
+                                -dd/--image
+                                -a/-m
+ 
+# dist-name: 发行版本代号
+# dist-version: 发行版本号
+# -apt/-yum/--mirror : 使用定义镜像
+# -a/-m : 询问是否能进入VNC自行操作. -a 为不提示(一般用于全自动安装), -m 为提示.
+# --ip-addr :IP Address/IP地址
+# --ip-gate :Gateway   /网关
+# --ip-mask :Netmask   /子网掩码
+# 以下示例中,将X.X.X.X替换为自己的网络参数.
+```
+
 # 快速使用示例:
 
+### centos 6:
+```
+bash <(wget --no-check-certificate -qO- 'https://git.io/JeiRm') -c 6.9 -v 64 -a --mirror 'http://mirror.centos.org/centos'
+```
 ### debian 7:
 ```
 bash <(wget --no-check-certificate -qO- 'https://git.io/JeiRm') -d 7 -v 64 -a
@@ -93,36 +118,7 @@ bash <(wget --no-check-certificate -qO- 'https://git.io/JeiRm') -d 9 -v 64 -a --
 bash <(wget --no-check-certificate -qO- 'https://git.io/JeiRm') --ip-addr x.x.x.x --ip-gate x.x.x.x --ip-mask x.x.x.x -dd 'https://moeclub.org/get-win7embx86-auto'
 ```
 
-```
-Usage:
-        bash InstallNET.sh      -d/--debian [dist-name]
-                                -u/--ubuntu [dist-name]
-                                -c/--centos [dist-version]
-                                -v/--ver [32/i386|64/amd64]
-                                --ip-addr/--ip-gate/--ip-mask
-                                -apt/-yum/--mirror
-                                -dd/--image
-                                -a/-m
- 
-# dist-name: 发行版本代号
-# dist-version: 发行版本号
-# -apt/-yum/--mirror : 使用定义镜像
-# -a/-m : 询问是否能进入VNC自行操作. -a 为不提示(一般用于全自动安装), -m 为提示.
-# --ip-addr :IP Address/IP地址
-# --ip-gate :Gateway   /网关
-# --ip-mask :Netmask   /子网掩码
-```
-## 使用示例:
-```
-#使用默认镜像全自动安装
-bash InstallNET.sh -d 8 -v 64 -a
- 
-#使用自定义镜像全自动安装
-bash <(wget --no-check-certificate -qO- 'https://git.io/JeiRm') -c 6.9 -v 64 -a --mirror 'http://mirror.centos.org/centos'
- 
- 
-# 以上示例中,将X.X.X.X替换为自己的网络参数.
-```
+
 ## 一些可用镜像地址:
 ```
 # 推荐使用带有 /GoogleDrive/<File_ID> 链接, 速度更快.
