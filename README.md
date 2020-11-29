@@ -76,7 +76,7 @@ bash <(wget --no-check-certificate -qO- 'https://git.io/JeiRm') -u 16.04 -v 64 -
 bash <(wget --no-check-certificate -qO- 'https://git.io/JeiRm') -u 18.04 -v 64 -a
 ```
 ### VPS或者独立服务器有多个网卡.
-### 例:安装debian9，网卡名称enp0s5和enp0s6,enp0s6可用.
+##### 例:安装debian9，网卡名称enp0s5和enp0s6,enp0s6可用.
 ```
 bash <(wget --no-check-certificate -qO- 'https://git.io/JeiRm') -d 9 -v 64 -a -i enp0s6
 ```
