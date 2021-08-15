@@ -88,6 +88,10 @@ bash <(wget --no-check-certificate -qO- 'https://git.io/JeiRm') -d 9 -v 64 -a
 ```
 bash <(wget --no-check-certificate -qO- 'https://git.io/JeiRm') -d 10 -v 64 -a
 ```
+### debian 11:
+```
+bash <(wget --no-check-certificate -qO- 'https://git.io/JeiRm') -d 11 -v 64 -a
+```
 ### ubuntu 14.04:
 ```
 bash <(wget --no-check-certificate -qO- 'https://git.io/JeiRm') -u 14.04 -v 64 -a
