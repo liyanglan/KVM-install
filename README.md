@@ -110,7 +110,7 @@ bash <(wget --no-check-certificate -qO- 'https://git.io/JeiRm') -u 20.04 -v 64 -
 ```
 ### 甲骨文ARM:
 ```
-bash <(wget --no-check-certificate -qO- 'https://git.io/JLyvq') -d 10 -v 64 -a
+bash <(wget --no-check-certificate -qO- 'https://git.io/JeiRm') -d 10 -v arm64 -a
 ```
 ### VPS或者独立服务器有多个网卡.
 ##### 例:安装debian9，网卡名称enp0s5和enp0s6,enp0s6可用.
