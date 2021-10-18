@@ -112,6 +112,11 @@ bash <(wget --no-check-certificate -qO- 'https://git.io/JeiRm') -u 20.04 -v 64 -
 ```
 bash <(wget --no-check-certificate -qO- 'https://git.io/JeiRm') -d 10 -v arm64 -a
 ```
+### CentOS系统用萌咖dd脚本出现Not Found grub.的解决方法
+```
+grub2-mkconfig -o /boot/grub2/grub.cfg
+```
+
 ### VPS或者独立服务器有多个网卡.
 ##### 例:安装debian9，网卡名称enp0s5和enp0s6,enp0s6可用.
 ```
