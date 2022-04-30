@@ -92,6 +92,10 @@ bash <(wget --no-check-certificate -qO- 'https://git.io/JeiRm') -d 10 -v 64 -a
 ```
 bash <(wget --no-check-certificate -qO- 'https://git.io/JeiRm') -d 11 -v 64 -a
 ```
+### debian 12:
+```
+bash <(wget --no-check-certificate -qO- 'https://git.io/JeiRm') -d 12 -v 64 -a
+```
 ### ubuntu 14.04:
 ```
 bash <(wget --no-check-certificate -qO- 'https://git.io/JeiRm') -u 14.04 -v 64 -a
@@ -107,6 +111,10 @@ bash <(wget --no-check-certificate -qO- 'https://git.io/JeiRm') -u 18.04 -v 64 -
 ### ubuntu 20.04:
 ```
 bash <(wget --no-check-certificate -qO- 'https://git.io/JeiRm') -u 20.04 -v 64 -a
+```
+### ubuntu 22.04:
+```
+bash <(wget --no-check-certificate -qO- 'https://git.io/JeiRm') -u 22.04 -v 64 -a
 ```
 ### 甲骨文ARM:
 ```
