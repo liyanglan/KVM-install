@@ -55,7 +55,7 @@ Usage:
                                 -apt/-yum/--mirror
                                 -dd/--image
                                 -a/-m
- 
+
 # dist-name: 发行版本代号
 # dist-version: 发行版本号
 # -apt/-yum/--mirror : 使用定义镜像
@@ -95,6 +95,10 @@ bash <(wget --no-check-certificate -qO- 'https://git.io/JeiRm') -d 11 -v 64 -a
 ### debian 12:
 ```
 bash <(wget --no-check-certificate -qO- 'https://git.io/JeiRm') -d 12 -v 64 -a
+```
+### debian 13:
+```
+bash <(wget --no-check-certificate -qO- 'https://git.io/JeiRm') -d 13 -v 64 -a
 ```
 ### ubuntu 14.04:
 ```
@@ -149,11 +153,11 @@ bash <(wget --no-check-certificate -qO- 'https://git.io/JeiRm') --ip-addr x.x.x.
 # 推荐使用带有 /GoogleDrive/<File_ID> 链接, 速度更快.
 # 当然也可以使用自己GoogleDrive中储存的镜像,使用方式:
   https://image.moeclub.org/GoogleDrive/<File_ID>
- 
+
 # win7emb_x86.tar.gz:
-  https://image.moeclub.org/GoogleDrive/1srhylymTjYS-Ky8uLw4R6LCWfAo1F3s7 
+  https://image.moeclub.org/GoogleDrive/1srhylymTjYS-Ky8uLw4R6LCWfAo1F3s7
   https://image.moeclub.org/win7emb_x86.tar.gz
- 
+
 # win8.1emb_x64.tar.gz:
   https://image.moeclub.org/GoogleDrive/1cqVl2wSGx92UTdhOxU9pW3wJgmvZMT_J
   https://image.moeclub.org/win8.1emb_x64.tar.gz
